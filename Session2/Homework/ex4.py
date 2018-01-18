@@ -10,6 +10,12 @@ for i in range(0, 10):
 	print()
 print()
 for i in range(0, 10):
-	for i in range (0, 10):
-		print("x*",end="")
+	for i in range (0, 20):
+		if i % 2 == 0:
+			print("x",end="")
+		else:
+			print("*",end="")
+
+
+
 	print()
