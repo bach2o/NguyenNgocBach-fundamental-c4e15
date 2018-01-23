@@ -18,4 +18,3 @@ while True:
         break
     else:
         print("Sorry, that's not the correct answer")
-exit()

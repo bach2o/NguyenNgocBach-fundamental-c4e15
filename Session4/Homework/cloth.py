@@ -9,14 +9,24 @@ while True:
         print('Our items: ', end='')
         print(*Clothes, sep=', ')
     elif Acts == 'U':
-        i  = int(input('Update position?' ))
-        Clothes[i - 1] = input('New item?')
-        print('Our items: ', end='')
-        print(*Clothes, sep=', ')
+        while True:
+            i  = int(input('Update position?' ))
+            if i > len(Clothes):
+                print('Please enter the correct position.')
+            else:
+                Clothes[i - 1] = input('New item?')
+                print('Our items: ', end='')
+                print(*Clothes, sep=', ')
+                break
     elif Acts == 'D':
-        i  = int(input('Delete position?' ))
-        Clothes.pop(i - 1)
-        print('Our items: ', end='')
-        print(*Clothes, sep=', ')
+        while True:
+            i  = int(input('Delete position?' ))
+            if i > len(Clothes):
+                print('Please enter the correct position.')
+            else:
+                Clothes.pop(i - 1)
+                print('Our items: ', end='')
+                print(*Clothes, sep=', ')
+                break
     else:
         print('Please enter the correct command!')
